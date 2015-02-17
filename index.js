@@ -31,7 +31,8 @@ export default React.createClass({
       progress: {
         stroke: strokeColor,
         strokeWidth: strokeWidth,
-        strokeDashoffset: strokeDashoffset
+        strokeDashoffset: strokeDashoffset,
+        transition: 'stroke-dashoffset 1s linear'
       },
       text: {
         fontFamily: fontFamily,
