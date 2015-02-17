@@ -28,6 +28,10 @@ export default React.createClass({
     var textNode;
 
     var styles = {
+      progressBackground: {
+        stroke: '#CCC',
+        strokeWidth: strokeWidth
+      },
       progress: {
         stroke: strokeColor,
         strokeWidth: strokeWidth,
@@ -43,6 +47,7 @@ export default React.createClass({
 
     return (
       <svg width={height} height={height} viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <circle r={radius} cx={cx} cy={cy} style={styles.progressBackground} fill="transparent" strokeDasharray='0'></circle>
         <circle r={radius} cx={cx} cy={cy} style={styles.progress} fill="transparent" strokeDasharray={circumference}></circle>
         {includeText && <text style={styles.text} textAnchor='middle' x='50%' y='50%'>{percent+'%'}</text>}
       </svg>
