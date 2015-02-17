@@ -40,14 +40,10 @@ export default React.createClass({
       }
     };
 
-    if (includeText) {
-      textNode = <text style={styles.text} textAnchor='middle' x='50%' y='50%'>{percent+'%'}</text>;
-    }
-
     return (
       <svg width={height} height={height} viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <circle r={radius} cx={cx} cy={cy} style={styles.progress} fill="transparent" strokeDasharray={circumference}></circle>
-        {textNode}
+        {includeText && <text style={styles.text} textAnchor='middle' x='50%' y='50%'>{percent+'%'}</text>}
       </svg>
     );
   }
