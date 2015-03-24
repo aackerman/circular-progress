@@ -1,0 +1,10 @@
+{
+  "name": "example",
+  "main": "main.js",
+  "dependencies": {
+    "babel-core": "^4.7.16",
+    "babel-loader": "^4.2.0",
+    "react": "^0.13.1",
+    "webpack": "^1.7.3"
+  }
+}
